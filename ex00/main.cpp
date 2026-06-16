@@ -20,7 +20,7 @@ const char *exception_not_found::what(void) const throw()
 int main(void)
 {
 	std::vector<int> vect;
-	vect.push_back(1);
+	vect.push_back(1); // ajoute des elements a la fin
 	vect.push_back(2);
 	vect.push_back(5);
 	vect.push_back(4);
