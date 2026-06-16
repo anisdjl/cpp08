@@ -22,6 +22,7 @@ class Span
 		int		longestSpan(void);
 		void	addMember(void);
 };
+
 // une classe span, son constructeur recoit N, qui est le nomre de int que peut recevoir le span
 // cette classe a une methode addnumber qui va ajouter des choffres au span
 // cette classe a deux methodes longestspan et shortest span qui va calculer la plus grande distance entre deux chiffre 

@@ -45,7 +45,7 @@ int	Span::shortestSpan(void) // je parcours le _vector trie et je calcule la dif
 	std::vector<int> copy(_vect);
 	std::sort(copy.begin(), copy.end());
 	diff = INT_MAX;
-	for (int i = 1; i < copy.size(); i++)
+	for (size_t i = 1; i < copy.size(); i++)
 	{
 		if (copy[i] - copy[i - 1] < diff)
 		{
