@@ -20,7 +20,14 @@ class Span
 		void	addNumber(int num); //avnat d'ajouter dans le vect je dois checker la taille actuelle du vect 
 		int		shortestSpan(void);
 		int		longestSpan(void);
-		void	addMember(void);
+		template <typename T> void addMember(T begin, T end)
+		{
+			size_t distance = _vect::distance(begin, end);
+
+			if (distance + _vect.size() > _num_elem)
+				throw std::runtime_error("Error: couldn't fill the span");
+			_vect.insert(_vect.end(), begin, end);
+		}
 };
 
 // une classe span, son constructeur recoit N, qui est le nomre de int que peut recevoir le span
