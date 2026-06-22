@@ -54,8 +54,3 @@ int	Span::shortestSpan(void) // je parcours le _vector trie et je calcule la dif
 	}
 	return (diff);
 }
-
-void	Span::addMember(void)
-{
-
-}

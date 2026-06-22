@@ -1,6 +1,6 @@
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
-NAME = a.out
+NAME = ex02
 SRC = main.cpp \
 	  
 OBJ = $(SRC:.cpp=.o)

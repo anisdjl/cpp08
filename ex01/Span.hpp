@@ -22,16 +22,16 @@ class Span
 		int		longestSpan(void);
 		template <typename T> void addMember(T begin, T end)
 		{
-			size_t distance = _vect::distance(begin, end);
+			size_t distance = std::distance(begin, end);
 
-			if (distance + _vect.size() > _num_elem)
+			if (distance + _vect.size() > _num_elem) // vect.size() c'est le nombre de choffre qui sont deja dans le vect
 				throw std::runtime_error("Error: couldn't fill the span");
-			_vect.insert(_vect.end(), begin, end);
+			_vect.insert(_vect.end(), begin, end); // on va inserer a la fin de notre vecteur de span tout les elements de begin jusqu'a end
 		}
+		// int getVlaue(int i)
+		// {
+		// 	return (_vect[i]);
+		// }
 };
 
-// une classe span, son constructeur recoit N, qui est le nomre de int que peut recevoir le span
-// cette classe a une methode addnumber qui va ajouter des choffres au span
-// cette classe a deux methodes longestspan et shortest span qui va calculer la plus grande distance entre deux chiffre 
-// utiliser un range of iterators pour ajputer beaucoup de nomres a mon span
 #endif
