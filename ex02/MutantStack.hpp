@@ -30,6 +30,4 @@ class MutantStack : public std::stack<T>
 		iterator end(void)		{ return (this->c.end()); };
 };
 
-// je dois pouvoir stocker tout ca dans une stack de type T, vu que ca herite de la vrai stack et que la stack est un simple adaptateur de container d'une dque donc en heritant j'ai acces directement au iterateur de la dque
-// la question que je me pose c'est est ce que je dois mettre
 #endif
