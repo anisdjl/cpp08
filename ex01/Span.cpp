@@ -45,17 +45,16 @@ int	Span::shortestSpan(void) // je parcours le _vector trie et je calcule la dif
 {
 	if (_vect.size() < 2)
 		throw std::runtime_error("*No span can be found, not enough elements*");
-	int diff;
+	long long diff;
+	long long min_diff = INT_MAX;
 
 	std::vector<int> copy(_vect);
 	std::sort(copy.begin(), copy.end());
-	diff = INT_MAX;
 	for (size_t i = 1; i < copy.size(); i++)
 	{
-		if (copy[i] - copy[i - 1] < diff)
-		{
-			diff = copy[i] - copy[i - 1];
-		}
+		diff = static_cast<long long>(copy[i]) - static_cast<long long>(copy[i - 1]);
+		if (diff < min_diff)
+			min_diff = diff;
 	}
-	return (diff);
+	return static_cast<int>(min_diff);
 }
