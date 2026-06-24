@@ -1,22 +1,5 @@
 #include "easyfind.hpp"
 
-exception_not_found::exception_not_found(int to_find)
-{
-	std::stringstream err;
-	err << "Error: the number " << to_find << " is not found in the container\n";
- 	_error = err.str();
-}
-
-exception_not_found::~exception_not_found(void) throw()
-{
-
-}
-
-const char *exception_not_found::what(void) const throw()
-{
-	return (_error.c_str());
-}
-
 int main(void)
 {
 	std::vector<int> vect;
