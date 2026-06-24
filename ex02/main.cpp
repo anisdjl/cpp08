@@ -1,27 +1,5 @@
 #include "MutantStack.hpp"
 
-// int main(void)
-// {
-// 	MutantStack<long> ms;
-
-// 	ms.push(0);
-// 	ms.push(1);
-// 	ms.push(2);
-// 	ms.push(3);
-// 	ms.push(4);
-// 	ms.push(5);
-
-// 	MutantStack<long> ms2;
-// 	ms2 = ms;
-
-// 	if (ms.empty())
-// 		std::cout << "the ms is empty" << std::endl;
-// 	MutantStack<long>::iterator end_it = ms.end();
-// 	end_it--;
-// 	std::cout << "Begin: " << *ms.begin() << " End: " << *end_it << std::endl;
-// 	return (0);
-// }
-
 int main()
 {
 	std::cout << "========= Mutant stack ========" << std::endl;
