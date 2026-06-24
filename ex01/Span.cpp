@@ -31,9 +31,14 @@ void	Span::addNumber(int num)
 
 int	Span::longestSpan(void) // la diff entre le plus grand et le plus petit
 {
+	long long diff;
 	if (_vect.size() < 2)
 		throw std::runtime_error("*No span can be found, not enough elements*");
-	return (*std::max_element(_vect.begin(), _vect.end()) - *std::min_element(_vect.begin(), _vect.end()));
+	
+	diff = *std::max_element(_vect.begin(), _vect.end()) - *std::min_element(_vect.begin(), _vect.end());
+	if (diff > INT_MAX)
+		throw std::runtime_error("*The longest span is bigger than INT_MAX*");
+	return (static_cast<int>(diff));
 }
 
 int	Span::shortestSpan(void) // je parcours le _vector trie et je calcule la diff entre chaque deux chiffres et la diff la plus petite c'est elle que je renvoie mais pas sur de cette idee 
