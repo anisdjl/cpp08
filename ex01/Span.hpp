@@ -6,6 +6,7 @@
 #include <string>
 #include <algorithm>
 #include <climits>
+#include <ctime>
 
 class Span
 {

@@ -2,6 +2,7 @@
 
 int main(void)
 {
+	srand(time(NULL));
 	Span span_test(10000);
 	std::vector<int> first_vect(10000);
 	std::generate_n(first_vect.begin(), 10000, rand); // va remplir le vect de chiffre aleatoire
@@ -22,6 +23,7 @@ int main(void)
 		std::cerr << e.what() << std::endl;
 	}
 	std::cout << span_test.longestSpan() << std::endl;
+	std::cout << span_test.shortestSpan() << std::endl;
 
 	return (0);
 }
